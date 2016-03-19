@@ -32,8 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\AspNet.Identity.AdoNet.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,7 +49,96 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\DatabaseCommand.cs" />
+    <Compile Include="Commands\IRolesTableCommands.cs" />
+    <Compile Include="Commands\ITableCommands.cs" />
+    <Compile Include="Commands\IUserLoginsTableCommands.cs" />
+    <Compile Include="Commands\IUserRolesTableCommands.cs" />
+    <Compile Include="Commands\IUsersTableCommands.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IdentityDbContext.cs" />
+    <Compile Include="Nomenclature\IContextNomenclature.cs" />
+    <Compile Include="IdentityRole.cs" />
+    <Compile Include="IdentityUser.cs" />
+    <Compile Include="IIdentityDbContext.cs" />
+    <Compile Include="Commands\IUserClaimsTableCommands.cs" />
+    <Compile Include="Nomenclature\IdentityContextNomenclature.cs" />
+    <Compile Include="Nomenclature\RolesTableNomenclature.cs" />
+    <Compile Include="Nomenclature\TableNomenclature.cs" />
+    <Compile Include="Nomenclature\UserClaimsTableNomenclature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Nomenclature\UserRolesTableNomenclature.cs" />
+    <Compile Include="Nomenclature\UsersTableNomenclature.cs" />
+    <Compile Include="Nomenclature\UserLoginsTableNomenclature.cs" />
+    <Compile Include="RoleStore..IQueryableRoleStore.cs">
+      <DependentUpon>RoleStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoleStore.cs" />
+    <Compile Include="RoleStore.IRoleStore.cs">
+      <DependentUpon>RoleStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\RolesTable.cs" />
+    <Compile Include="Tables\RolesTable.Parameters.cs">
+      <DependentUpon>RolesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\Table.cs" />
+    <Compile Include="Tables\UserClaimsTable.cs" />
+    <Compile Include="Tables\UserClaimsTable.Parameters.cs">
+      <DependentUpon>UserClaimsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\UserLoginsTable.cs" />
+    <Compile Include="Tables\UserLoginsTable.Parameters.cs">
+      <DependentUpon>UserLoginsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\UserRolesTable.cs" />
+    <Compile Include="Tables\UserRolesTable.Parameters.cs">
+      <DependentUpon>UserRolesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\UsersTable.cs" />
+    <Compile Include="Tables\UsersTable.Parameters.cs">
+      <DependentUpon>UsersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IQueryableUserStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserClaimStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.cs" />
+    <Compile Include="UserStore.IUserEmailStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserLockoutStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserLoginStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserPasswordStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserPhoneNumberStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserRoleStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserSecurityStampStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStore.IUserTwoFactorStore.cs">
+      <DependentUpon>UserStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CustomDictionary.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
