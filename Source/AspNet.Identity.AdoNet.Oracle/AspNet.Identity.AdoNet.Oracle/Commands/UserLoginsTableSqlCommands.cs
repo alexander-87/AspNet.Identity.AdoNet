@@ -42,9 +42,9 @@
                         ")",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserLoginsTable.Parameters.AddNewUserLogin.ProviderName, OracleDbType.Varchar2),
-                        new OracleParameter(UserLoginsTable.Parameters.AddNewUserLogin.ProviderKey, OracleDbType.Varchar2),
-                        new OracleParameter(UserLoginsTable.Parameters.AddNewUserLogin.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UserLoginsTable.Parameters.AddNewUserLogin.ProviderName, OracleDbType.Varchar2, 128),
+                        new OracleParameter(UserLoginsTable.Parameters.AddNewUserLogin.ProviderKey, OracleDbType.Varchar2, 128),
+                        new OracleParameter(UserLoginsTable.Parameters.AddNewUserLogin.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -61,7 +61,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UserLoginsTable.Parameters.DeleteAllLoginsForUserById.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserLoginsTable.Parameters.DeleteAllLoginsForUserById.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UserLoginsTable.Parameters.DeleteAllLoginsForUserById.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -80,9 +80,9 @@
                         $"   AND \"{TableNomenclature.ProviderKeyColumnName}\" = :{UserLoginsTable.Parameters.DeleteUserLogin.ProviderKey}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserLoginsTable.Parameters.DeleteUserLogin.UserId, OracleDbType.Varchar2),
-                        new OracleParameter(UserLoginsTable.Parameters.DeleteUserLogin.ProviderName, OracleDbType.Varchar2),
-                        new OracleParameter(UserLoginsTable.Parameters.DeleteUserLogin.ProviderKey, OracleDbType.Varchar2)
+                        new OracleParameter(UserLoginsTable.Parameters.DeleteUserLogin.UserId, OracleDbType.Varchar2, 128),
+                        new OracleParameter(UserLoginsTable.Parameters.DeleteUserLogin.ProviderName, OracleDbType.Varchar2, 128),
+                        new OracleParameter(UserLoginsTable.Parameters.DeleteUserLogin.ProviderKey, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -100,7 +100,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UserLoginsTable.Parameters.GetAllUserLoginsForUserId.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserLoginsTable.Parameters.GetAllUserLoginsForUserId.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UserLoginsTable.Parameters.GetAllUserLoginsForUserId.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -119,8 +119,8 @@
                         $"   AND \"{TableNomenclature.ProviderKeyColumnName}\" = :{UserLoginsTable.Parameters.GetUserIdByLogin.ProviderKey}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserLoginsTable.Parameters.GetUserIdByLogin.ProviderName, OracleDbType.Varchar2),
-                        new OracleParameter(UserLoginsTable.Parameters.GetUserIdByLogin.ProviderKey, OracleDbType.Varchar2)
+                        new OracleParameter(UserLoginsTable.Parameters.GetUserIdByLogin.ProviderName, OracleDbType.Varchar2, 128),
+                        new OracleParameter(UserLoginsTable.Parameters.GetUserIdByLogin.ProviderKey, OracleDbType.Varchar2, 128)
                     }
                 };
             }

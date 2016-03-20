@@ -44,7 +44,7 @@
                     {
                         new OracleParameter(UserClaimsTable.Parameters.AddClaimForUser.ClaimType, OracleDbType.Clob),
                         new OracleParameter(UserClaimsTable.Parameters.AddClaimForUser.ClaimValue, OracleDbType.Clob),
-                        new OracleParameter(UserClaimsTable.Parameters.AddClaimForUser.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UserClaimsTable.Parameters.AddClaimForUser.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -61,7 +61,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UserClaimsTable.Parameters.DeleteAllClaimsForUser.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserClaimsTable.Parameters.DeleteAllClaimsForUser.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UserClaimsTable.Parameters.DeleteAllClaimsForUser.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -80,7 +80,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UserClaimsTable.Parameters.GetAllClaimsForUser.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserClaimsTable.Parameters.GetAllClaimsForUser.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UserClaimsTable.Parameters.GetAllClaimsForUser.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -99,7 +99,7 @@
                         $"   AND \"{TableNomenclature.ClaimValueColumnName}\" = :{UserClaimsTable.Parameters.RemoveClaimForUser.ClaimValue}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserClaimsTable.Parameters.RemoveClaimForUser.UserId, OracleDbType.Varchar2),
+                        new OracleParameter(UserClaimsTable.Parameters.RemoveClaimForUser.UserId, OracleDbType.Varchar2, 128),
                         new OracleParameter(UserClaimsTable.Parameters.RemoveClaimForUser.ClaimType, OracleDbType.Clob),
                         new OracleParameter(UserClaimsTable.Parameters.RemoveClaimForUser.ClaimValue, OracleDbType.Clob)
                     }

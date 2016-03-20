@@ -46,7 +46,7 @@
                         $" WHERE \"{UserRolesTableNomenclature.UserIdColumnName}\" = :{UserRolesTable.Parameters.DeleteByUserId.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserRolesTable.Parameters.DeleteByUserId.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UserRolesTable.Parameters.DeleteByUserId.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -67,7 +67,7 @@
                         $" WHERE \"{UserRolesTableNomenclature.UserIdColumnName}\" = :{UserRolesTable.Parameters.GetRolesForUserId.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserRolesTable.Parameters.GetRolesForUserId.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UserRolesTable.Parameters.GetRolesForUserId.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -89,8 +89,8 @@
                         ")",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserRolesTable.Parameters.AddUserToRole.UserId, OracleDbType.Varchar2),
-                        new OracleParameter(UserRolesTable.Parameters.AddUserToRole.RoleId, OracleDbType.Varchar2)
+                        new OracleParameter(UserRolesTable.Parameters.AddUserToRole.UserId, OracleDbType.Varchar2, 128),
+                        new OracleParameter(UserRolesTable.Parameters.AddUserToRole.RoleId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -108,8 +108,8 @@
                         $"   AND \"{UserRolesTableNomenclature.RoleIdColumnName}\" = :{UserRolesTable.Parameters.RemoveUserFromFromRole.RoleId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UserRolesTable.Parameters.RemoveUserFromFromRole.UserId, OracleDbType.Varchar2),
-                        new OracleParameter(UserRolesTable.Parameters.RemoveUserFromFromRole.RoleId, OracleDbType.Varchar2)
+                        new OracleParameter(UserRolesTable.Parameters.RemoveUserFromFromRole.UserId, OracleDbType.Varchar2, 128),
+                        new OracleParameter(UserRolesTable.Parameters.RemoveUserFromFromRole.RoleId, OracleDbType.Varchar2, 128)
                     }
                 };
             }

@@ -35,7 +35,7 @@
                         $" WHERE \"{TableNomenclature.RoleIdColumnName}\" = :{RolesTable.Parameters.DeleteRoleById.RoleId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(RolesTable.Parameters.DeleteRoleById.RoleId, OracleDbType.Varchar2)
+                        new OracleParameter(RolesTable.Parameters.DeleteRoleById.RoleId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -89,7 +89,7 @@
                         $" WHERE \"{TableNomenclature.RoleIdColumnName}\" = :{RolesTable.Parameters.GetRoleNameById.RoleId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(RolesTable.Parameters.GetRoleNameById.RoleId, OracleDbType.Varchar2)
+                        new OracleParameter(RolesTable.Parameters.GetRoleNameById.RoleId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -111,8 +111,8 @@
                         ")",
                     Parameters = new[]
                     {
-                        new OracleParameter(RolesTable.Parameters.InsertRole.RoleId, OracleDbType.Varchar2),
-                        new OracleParameter(RolesTable.Parameters.InsertRole.RoleName, OracleDbType.Varchar2)
+                        new OracleParameter(RolesTable.Parameters.InsertRole.RoleId, OracleDbType.Varchar2, 128),
+                        new OracleParameter(RolesTable.Parameters.InsertRole.RoleName, OracleDbType.Varchar2, 256)
                     }
                 };
             }
@@ -130,8 +130,8 @@
                         $" WHERE \"{TableNomenclature.RoleIdColumnName}\" = :{RolesTable.Parameters.UpdateRole.RoleId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(RolesTable.Parameters.UpdateRole.RoleName, OracleDbType.Varchar2),
-                        new OracleParameter(RolesTable.Parameters.UpdateRole.RoleId, OracleDbType.Varchar2)
+                        new OracleParameter(RolesTable.Parameters.UpdateRole.RoleName, OracleDbType.Varchar2, 256),
+                        new OracleParameter(RolesTable.Parameters.UpdateRole.RoleId, OracleDbType.Varchar2, 128)
                     }
                 };
             }

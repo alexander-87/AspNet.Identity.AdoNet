@@ -59,18 +59,18 @@
                         ")",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.UserId, OracleDbType.Varchar2),
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.UserName, OracleDbType.Varchar2),
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.Email, OracleDbType.Varchar2),
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.EmailConfirmed, OracleDbType.Decimal),
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.UserId, OracleDbType.Varchar2, 128),
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.UserName, OracleDbType.Varchar2, 256),
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.Email, OracleDbType.Varchar2, 256),
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.EmailConfirmed, OracleDbType.Decimal, 3),
                         new OracleParameter(UsersTable.Parameters.AddNewUser.PasswordHash, OracleDbType.Clob),
                         new OracleParameter(UsersTable.Parameters.AddNewUser.SecurityStamp, OracleDbType.Clob),
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.PhoneNumber, OracleDbType.Varchar2),
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.PhoneNumberConfirmed, OracleDbType.Decimal),
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.AccessFailedCount, OracleDbType.Decimal),
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.LockoutEnabled, OracleDbType.Decimal),
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.PhoneNumber, OracleDbType.Varchar2, 48),
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.PhoneNumberConfirmed, OracleDbType.Decimal, 3),
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.AccessFailedCount, OracleDbType.Decimal, 10),
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.LockoutEnabled, OracleDbType.Decimal, 3),
                         new OracleParameter(UsersTable.Parameters.AddNewUser.LockoutEndDateUtc, OracleDbType.Date),
-                        new OracleParameter(UsersTable.Parameters.AddNewUser.TwoFactorAuthEnabled, OracleDbType.Decimal)
+                        new OracleParameter(UsersTable.Parameters.AddNewUser.TwoFactorAuthEnabled, OracleDbType.Decimal, 3)
                     }
                 };
             }
@@ -87,7 +87,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UsersTable.Parameters.DeleteUser.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.DeleteUser.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.DeleteUser.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -116,7 +116,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UsersTable.Parameters.GetPasswordHashForUser.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.GetPasswordHashForUser.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.GetPasswordHashForUser.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -134,7 +134,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UsersTable.Parameters.GetSecurityStampForUser.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.GetSecurityStampForUser.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.GetSecurityStampForUser.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -152,7 +152,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UsersTable.Parameters.GetUserById.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.GetUserById.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.GetUserById.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -170,7 +170,7 @@
                         $" WHERE \"{TableNomenclature.UserNameColumnName}\" = :{UsersTable.Parameters.GetUserIdByUserName.UserName}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.GetUserIdByUserName.UserName, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.GetUserIdByUserName.UserName, OracleDbType.Varchar2, 256)
                     }
                 };
             }
@@ -188,7 +188,7 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UsersTable.Parameters.GetUserNameByUserId.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.GetUserNameByUserId.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.GetUserNameByUserId.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -206,7 +206,7 @@
                         $" WHERE \"{TableNomenclature.EmailAddressColumnName}\" = :{UsersTable.Parameters.GetUsersByEmail.EmailAddress}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.GetUsersByEmail.EmailAddress, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.GetUsersByEmail.EmailAddress, OracleDbType.Varchar2, 256)
                     }
                 };
             }
@@ -224,7 +224,7 @@
                         $" WHERE \"{TableNomenclature.UserNameColumnName}\" = :{UsersTable.Parameters.GetUsersByUserName.UserName}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.GetUsersByUserName.UserName, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.GetUsersByUserName.UserName, OracleDbType.Varchar2, 256)
                     }
                 };
             }
@@ -243,7 +243,7 @@
                     Parameters = new[]
                     {
                         new OracleParameter(UsersTable.Parameters.SetPasswordHashForUser.PasswordHash, OracleDbType.Clob),
-                        new OracleParameter(UsersTable.Parameters.SetPasswordHashForUser.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.SetPasswordHashForUser.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
@@ -271,18 +271,18 @@
                         $" WHERE \"{TableNomenclature.UserIdColumnName}\" = :{UsersTable.Parameters.UpdateUser.UserId}",
                     Parameters = new[]
                     {
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.UserName, OracleDbType.Varchar2),
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.Email, OracleDbType.Varchar2),
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.EmailConfirmed, OracleDbType.Decimal),
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.UserName, OracleDbType.Varchar2, 256),
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.Email, OracleDbType.Varchar2, 256),
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.EmailConfirmed, OracleDbType.Decimal, 3),
                         new OracleParameter(UsersTable.Parameters.UpdateUser.PasswordHash, OracleDbType.Clob),
                         new OracleParameter(UsersTable.Parameters.UpdateUser.SecurityStamp, OracleDbType.Clob),
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.PhoneNumber, OracleDbType.Varchar2),
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.PhoneNumberConfirmed, OracleDbType.Decimal),
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.AccessFailedCount, OracleDbType.Decimal),
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.LockoutEnabled, OracleDbType.Decimal),
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.PhoneNumber, OracleDbType.Varchar2, 48),
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.PhoneNumberConfirmed, OracleDbType.Decimal, 3),
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.AccessFailedCount, OracleDbType.Decimal, 10),
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.LockoutEnabled, OracleDbType.Decimal, 3),
                         new OracleParameter(UsersTable.Parameters.UpdateUser.LockoutEndDateUtc, OracleDbType.Date),
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.TwoFactorAuthEnabled, OracleDbType.Decimal),
-                        new OracleParameter(UsersTable.Parameters.UpdateUser.UserId, OracleDbType.Varchar2)
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.TwoFactorAuthEnabled, OracleDbType.Decimal, 3),
+                        new OracleParameter(UsersTable.Parameters.UpdateUser.UserId, OracleDbType.Varchar2, 128)
                     }
                 };
             }
