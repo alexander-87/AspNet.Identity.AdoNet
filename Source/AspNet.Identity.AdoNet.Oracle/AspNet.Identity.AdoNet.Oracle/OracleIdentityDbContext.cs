@@ -54,9 +54,6 @@
         public override System.Data.IDbConnection CreateDbConnection() =>
             new global::Oracle.ManagedDataAccess.Client.OracleConnection(connectionString);
 
-        /// <remarks>This is really only here to appease OWIN.</remarks>
-        public override void Dispose() { }
-
         /// <summary>Gets a string containing the DDL necessary for creating the ASP.NET Identity database objects.</summary>
         /// <returns>A string containing the DDL necessary for creating the ASP.NET Identity database objects.</returns>
         public override string GenerateObjectCreationSql()
