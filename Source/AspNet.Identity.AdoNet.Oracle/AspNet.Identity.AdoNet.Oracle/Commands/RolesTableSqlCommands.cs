@@ -66,9 +66,9 @@
                 return new DatabaseCommand
                 {
                     CommandText =
-                        $"SELECT {TableNomenclature.RoleIdColumnName}{Environment.NewLine}" +
-                        $"  FROM {TableNomenclature.TableName}{Environment.NewLine}" +
-                        $" WHERE {TableNomenclature.RoleNameColumnName} = :{RolesTable.Parameters.GetRoleIdByName.RoleName}",
+                        $"SELECT \"{TableNomenclature.RoleIdColumnName}\"{Environment.NewLine}" +
+                        $"  FROM \"{TableNomenclature.TableName}\"{Environment.NewLine}" +
+                        $" WHERE \"{TableNomenclature.RoleNameColumnName}\" = :{RolesTable.Parameters.GetRoleIdByName.RoleName}",
                     Parameters = new[]
                     {
                         new OracleParameter(RolesTable.Parameters.GetRoleIdByName.RoleName, OracleDbType.Varchar2, 256)
