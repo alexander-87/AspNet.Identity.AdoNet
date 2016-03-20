@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AspNet.Identity.AdoNet.Oracle")]
-[assembly: AssemblyDescription("Core library for custom ASP.NET Identity storage providers using ADO.NET")]
+[assembly: AssemblyDescription("Oracle ASP.NET Identity storage provider using ADO.NET")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AspNet.Identity.AdoNet")]
