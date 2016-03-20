@@ -30,6 +30,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Release\AspNet.Identity.AdoNet.Oracle.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AspNet.Identity.AdoNet.Core, Version=0.9.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -54,11 +56,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\RolesTableSqlCommands.cs" />
+    <Compile Include="Commands\UserClaimsTableSqlCommands.cs" />
+    <Compile Include="Commands\UserLoginsTableSqlCommands.cs" />
+    <Compile Include="Commands\UserRolesTableSqlCommands.cs" />
+    <Compile Include="Commands\UsersTableSqlCommands.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="OracleContextNomenclature.cs" />
+    <Compile Include="OracleIdentityDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
