@@ -1,6 +1,6 @@
 {
   "name": "AspNet.Identity.AdoNet",
-  "tagline": "Custom Storage Provider for ASP.NET Identity using ADO.NET",
-  "body": "# AspNet.Identity.AdoNet\r\nCustom Storage Provider for ASP.NET Identity using ADO.NET\r\n",
+  "tagline": "Custom ASP.NET Identity Storage Providers using ADO.NET",
+  "body": "# AspNet.Identity.AdoNet\r\nCustom ASP.NET Identity Storage Providers using ADO.NET\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
