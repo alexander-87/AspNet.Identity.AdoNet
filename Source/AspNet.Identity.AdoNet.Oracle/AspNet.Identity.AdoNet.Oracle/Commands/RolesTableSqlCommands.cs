@@ -55,10 +55,6 @@
             }
         }
 
-        public DatabaseCommand GetRoleById { get { throw new NotImplementedException(); } }
-
-        public DatabaseCommand GetRoleByName { get { throw new NotImplementedException(); } }
-
         public DatabaseCommand GetRoleIdByName
         {
             get
