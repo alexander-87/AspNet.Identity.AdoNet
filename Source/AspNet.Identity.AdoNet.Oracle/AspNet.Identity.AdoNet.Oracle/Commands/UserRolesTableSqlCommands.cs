@@ -42,7 +42,7 @@
                 return new DatabaseCommand
                 {
                     CommandText =
-                        $"DELETE FROM \"{UserRolesTableNomenclature.TableName}\"" + Environment.NewLine +
+                        $"DELETE FROM \"{UserRolesTableNomenclature.TableName}\"{Environment.NewLine}" +
                         $" WHERE \"{UserRolesTableNomenclature.UserIdColumnName}\" = :{UserRolesTable.Parameters.DeleteByUserId.UserId}",
                     Parameters = new[]
                     {
@@ -59,11 +59,11 @@
                 return new DatabaseCommand
                 {
                     CommandText =
-                        $"SELECT \"{RolesTableNomenclature.RoleNameColumnName}\" " + Environment.NewLine +
-                        $"  FROM \"{UserRolesTableNomenclature.TableName}\"" + Environment.NewLine +
-                        $" INNER JOIN \"{RolesTableNomenclature.TableName}\"" + Environment.NewLine +
-                        $"         ON \"{UserRolesTableNomenclature.TableName}\".\"{UserRolesTableNomenclature.RoleIdColumnName}\"" + Environment.NewLine +
-                        $"          = \"{RolesTableNomenclature.TableName}\".\"{RolesTableNomenclature.RoleIdColumnName}\"" + Environment.NewLine +
+                        $"SELECT \"{RolesTableNomenclature.RoleNameColumnName}\"{Environment.NewLine}" +
+                        $"  FROM \"{UserRolesTableNomenclature.TableName}\"{Environment.NewLine}" +
+                        $" INNER JOIN \"{RolesTableNomenclature.TableName}\"{Environment.NewLine}" +
+                        $"         ON \"{UserRolesTableNomenclature.TableName}\".\"{UserRolesTableNomenclature.RoleIdColumnName}\"{Environment.NewLine}" +
+                        $"          = \"{RolesTableNomenclature.TableName}\".\"{RolesTableNomenclature.RoleIdColumnName}\"{Environment.NewLine}" +
                         $" WHERE \"{UserRolesTableNomenclature.UserIdColumnName}\" = :{UserRolesTable.Parameters.GetRolesForUserId.UserId}",
                     Parameters = new[]
                     {
@@ -80,12 +80,12 @@
                 return new DatabaseCommand
                 {
                     CommandText =
-                        $"INSERT INTO \"{UserRolesTableNomenclature.TableName}\" (" + Environment.NewLine +
-                        $" \"{UserRolesTableNomenclature.UserIdColumnName}\"," + Environment.NewLine +
-                        $" \"{UserRolesTableNomenclature.RoleIdColumnName}\"" + Environment.NewLine +
-                        ") VALUES (" + Environment.NewLine +
-                        $" :{UserRolesTable.Parameters.AddUserToRole.UserId}," + Environment.NewLine +
-                        $" :{UserRolesTable.Parameters.AddUserToRole.RoleId}" + Environment.NewLine +
+                        $"INSERT INTO \"{UserRolesTableNomenclature.TableName}\" ({Environment.NewLine}" +
+                        $" \"{UserRolesTableNomenclature.UserIdColumnName}\",{Environment.NewLine}" +
+                        $" \"{UserRolesTableNomenclature.RoleIdColumnName}\"{Environment.NewLine}" +
+                        $") VALUES ({Environment.NewLine}" +
+                        $" :{UserRolesTable.Parameters.AddUserToRole.UserId},{Environment.NewLine}" +
+                        $" :{UserRolesTable.Parameters.AddUserToRole.RoleId}{Environment.NewLine}" +
                         ")",
                     Parameters = new[]
                     {
