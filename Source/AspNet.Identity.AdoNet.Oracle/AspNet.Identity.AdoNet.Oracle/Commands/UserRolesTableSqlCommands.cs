@@ -100,7 +100,18 @@
         {
             get
             {
-                throw new NotImplementedException();
+                return new DatabaseCommand
+                {
+                    CommandText =
+                        $"DELETE FROM \"{UserRolesTableNomenclature.TableName}\"{Environment.NewLine}" +
+                        $" WHERE \"{UserRolesTableNomenclature.UserIdColumnName}\" = :{UserRolesTable.Parameters.RemoveUserFromFromRole.UserId}{Environment.NewLine}" +
+                        $"   AND \"{UserRolesTableNomenclature.RoleIdColumnName}\" = :{UserRolesTable.Parameters.RemoveUserFromFromRole.RoleId}",
+                    Parameters = new[]
+                    {
+                        new OracleParameter(UserRolesTable.Parameters.RemoveUserFromFromRole.UserId, OracleDbType.Varchar2),
+                        new OracleParameter(UserRolesTable.Parameters.RemoveUserFromFromRole.RoleId, OracleDbType.Varchar2)
+                    }
+                };
             }
         }
 
