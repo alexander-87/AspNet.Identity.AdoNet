@@ -20,19 +20,7 @@
         ///     <see cref="RolesTable{TRole}.GetAllRoles"/> method is invoked.
         /// </summary>
         DatabaseCommand GetAllRoles { get; }
-
-        /// <summary>
-        ///     Gets the <see cref="DatabaseCommand"/> to be executed when the
-        ///     <see cref="RolesTable{TRole}.GetRoleById(string)"/> method is invoked.
-        /// </summary>
-        DatabaseCommand GetRoleById { get; }
-
-        /// <summary>
-        ///     Gets the <see cref="DatabaseCommand"/> to be executed when the
-        ///     <see cref="RolesTable{TRole}.GetRoleByName(string)"/> method is invoked.
-        /// </summary>
-        DatabaseCommand GetRoleByName { get; }
-
+        
         /// <summary>
         ///     Gets the <see cref="DatabaseCommand"/> to be executed when the
         ///     <see cref="RolesTable{TRole}.GetRoleIdByName(string)"/> method is invoked.
