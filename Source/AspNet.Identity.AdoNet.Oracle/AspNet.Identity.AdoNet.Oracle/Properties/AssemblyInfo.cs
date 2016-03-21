@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AspNet.Identity.AdoNet")]
-[assembly: AssemblyDescription("Core library for custom ASP.NET Identity storage providers using ADO.NET")]
+[assembly: AssemblyTitle("AspNet.Identity.AdoNet.Oracle")]
+[assembly: AssemblyDescription("Oracle ASP.NET Identity storage provider using ADO.NET")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AspNet.Identity.AdoNet")]
@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the TypeLib if this project is exposed to COM
-[assembly: Guid("1c75a66e-8cfb-4816-a546-1760db923815")]
+[assembly: Guid("728ff8c1-bf2f-4302-80dc-871c71cfe9f7")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -35,4 +35,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.9.0.0")]
 [assembly: AssemblyFileVersion("0.9.0.0")]
-[assembly: AssemblyInformationalVersion("0.9.3-alpha")]
+[assembly: AssemblyInformationalVersion("0.9.1-alpha")]
