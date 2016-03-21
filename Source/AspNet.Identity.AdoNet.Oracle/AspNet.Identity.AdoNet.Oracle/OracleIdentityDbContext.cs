@@ -3,7 +3,7 @@
     using System;
 
     /// <summary>Implementation of <see cref="IdentityDbContext"/> for use with an Oracle database.</summary>
-    public sealed class OracleIdentityDbContext : IdentityDbContext
+    public class OracleIdentityDbContext : IdentityDbContext
     {
         readonly string connectionString;
 
