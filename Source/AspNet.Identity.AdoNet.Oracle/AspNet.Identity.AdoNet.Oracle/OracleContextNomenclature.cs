@@ -10,22 +10,38 @@
         public OracleContextNomenclature()
         {
             RolesTableNomenclature =
-                new RolesTableNomenclature("ROLES", "ID", "ROLE_NAME");
-
+                new RolesTableNomenclature(tableName: "ROLES",
+                                           roleIdColumnName: "ID",
+                                           roleNameColumnName: "ROLE_NAME");
             UserClaimsTableNomenclature =
-                new UserClaimsTableNomenclature("USER_CLAIMS", "ID", "USER_ID", "CLAIM_TYPE", "CLAIM_VALUE");
-
+                new UserClaimsTableNomenclature(tableName: "USER_CLAIMS",
+                                                claimIdColumnName: "ID",
+                                                userIdColumnName: "USER_ID",
+                                                claimTypeColumnName: "CLAIM_TYPE",
+                                                claimValueColumnName: "CLAIM_VALUE");
             UserLoginsTableNomenclature =
-                new UserLoginsTableNomenclature("USER_LOGINS", "USER_ID", "PROVIDER_NAME", "PROVIDER_KEY");
-
+                new UserLoginsTableNomenclature(tableName: "USER_LOGINS",
+                                                userIdColumnName: "USER_ID",
+                                                providerNameColumnName: "PROVIDER_NAME",
+                                                providerKeyColumnName: "PROVIDER_KEY");
             UserRolesTableNomenclature =
-                new UserRolesTableNomenclature("USER_ROLE_MEMBERSHIP", "USER_ID", "ROLE_ID");
-
+                new UserRolesTableNomenclature(tableName: "USER_ROLES",
+                                               userIdColumnName: "USER_ID",
+                                               roleIdColumnName: "ROLE_ID");
             UsersTableNomenclature =
-                new UsersTableNomenclature("USERS", "ID", "EMAIL", "EMAIL_CONFIRMED", "PASSWORD_HASH", "SECURITY_STAMP",
-                                           "PHONE_NUMBER", "PHONE_NUMBER_CONFIRMED", "TWO_FACTOR_AUTH_ENABLED",
-                                           "LOCKOUT_END_DATE_UTC", "LOCKOUT_ENABLED", "ACCESS_FAILED_COUNT", "USERNAME");
-
+                new UsersTableNomenclature(tableName: "USERS",
+                                           userIdColumnName: "ID",
+                                           userNameColumnName: "USERNAME",
+                                           emailAddressColumnName: "EMAIL",
+                                           emailConfirmedColumnName: "EMAIL_CONFIRMED",
+                                           passwordHashColumnName: "PASSWORD_HASH",
+                                           securityStampColumnName: "SECURITY_STAMP",
+                                           phoneNumberColumnName: "PHONE_NUMBER",
+                                           phoneNumberConfirmedColumnName: "PHONE_NUMBER_CONFIRMED",
+                                           twoFactorAuthorizationEnabledColumnName: "TWO_FACTOR_AUTH_ENABLED",
+                                           lockoutEndDateUtcColumnName: "LOCKOUT_END_DATE_UTC",
+                                           lockoutEnabledColumnName: "LOCKOUT_ENABLED",
+                                           accessFailedCountColumnName: "ACCESS_FAILED_COUNT");
         }
     }
 }
